@@ -122,8 +122,8 @@ async function handlePostmarkWebhook(request: Request, env: any): Promise<Respon
     const processingTime = Date.now() - startTime;
     console.error(`[${requestId}] === ERROR OCCURRED ===`);
     console.error(`[${requestId}] Error type:`, error?.constructor?.name);
-    console.error(`[${requestId}] Error message:`, error?.message);
-    console.error(`[${requestId}] Error stack:`, error?.stack);
+    console.error(`[${requestId}] Error message:`, (error as Error)?.message);
+    console.error(`[${requestId}] Error stack:`, (error as Error)?.stack);
     console.error(`[${requestId}] Processing time before error: ${processingTime}ms`);
     
     const response: ApiResponse = {
