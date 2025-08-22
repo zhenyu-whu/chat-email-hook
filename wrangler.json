@@ -1,0 +1,16 @@
+{
+  "compatibility_date": "2025-04-01",
+  "main": "src/index.ts",
+  "name": "chat-email-hook",
+  "upload_source_maps": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_id": "3f02db09-d677-418a-8cc6-0d76ba71a358",
+      "database_name": "d1-email"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
